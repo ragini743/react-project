@@ -2,13 +2,17 @@
   "name": "project-1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+
+  
   "scripts": {
+    "build": "parcel build index.html",
+    "start": "parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "parcel": "^2.10.1",
     "postcss": "^8.4.30",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
