@@ -1,15 +1,9 @@
 import React from "react";
 import { useState } from "react";
-// import style.css from "../src/style.css" 
+
 
 const App =() =>{
    const [text, setText]=useState("")
-
-   console.log("HHH:", text)
-
-   x = 5
-
-    console.log(text)
 
     const calculateTotal = () => {
         return eval(text);
