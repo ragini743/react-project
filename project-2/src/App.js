@@ -14,11 +14,12 @@ const App =() =>{
     const calculateTotal = () => {
         return eval(text);
     }
-    return(<>
-        <div className="xs:w-full h-14 sm:w-1/2 lg:w-1/4 md:w-2/5 bg-slate-300 m-auto mb-0 pb-0 p-2 break-words overflow-x-auto">
+    return(
+    <div className="max-w-sm mx-auto my-5 p-4 rounded-lg shadow-lg">
+        <div className="w-full h-24 pb-2 bg-slate-200 border-gray-300 border-2 break-words">
             {text}
         </div>
-        <div className="xs:w-full sm:w-1/2 lg:w-1/4 bg-gradient-to-tr p-2 bg-emerald-200 grid grid-cols-4 md:w-2/5 justify-center m-auto  shadow-lg  mt-0" onClick={(e)=>{
+        <div className="w-full bg-emerald-200 grid grid-cols-4 justify-center m-auto  shadow-lg  mt-0" onClick={(e)=>{
             const userSelect = e.target.value;
             console.log(userSelect)
             if (userSelect == '=') {
@@ -74,7 +75,7 @@ const App =() =>{
             <button className="text-center
             border-2 p-2 m-2 rounded-lg border-gray-50  font-bold text-lg shadow-sm col-span-2" value="=">=</button>
         </div>
-        </>
+        </div>
     )
 }
 

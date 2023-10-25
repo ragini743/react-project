@@ -4,7 +4,7 @@ import App from "./src/App";
 
 const Index = () =>{
     return(
-        <div className="p-2">
+        <div>
       <App />
         </div>
     )
