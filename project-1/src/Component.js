@@ -1,5 +1,5 @@
 import React from "react";
-import App from "../../project-2/src/App";
+
 export const Component = (props) => {
   const { movie } = props;
   console.log(props);
