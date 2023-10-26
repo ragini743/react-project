@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Component } from "./Component";
+import {useSearchParams} from "react-router-dom"
 import { useState } from "react";
 export const App = () => {
     const [newMovies ,setNewMovies] =useState([]) ;
   const [movies, setmovies] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  // const [searchParams] = useSearchParams();
 
   useEffect(() => {
     fetchData();
   }, []);
+  useEffect(()=>{
+    inputResult();
+  },[])
 
   const fetchData = async () => {
     const data = await fetch(
@@ -25,21 +30,28 @@ export const App = () => {
   };
   console.log("movies", movies);
 
+  const inputResult = async ()=>{
+    const resultData= await fetch ("https://api.themoviedb.org/3/search/movie?api_key=d62e1adb9803081c0be5a74ca826bdbd&query="+{inputValue});
+    const resultJson= await resultData.json();
+    console.log("resultJson",resultJson)
+    
+  }
+
   return (
     <>
-      <div className=" flex justify-center m-4">
-        <div className="bold m-4 w-1/3 rounded-lg border-2 border-gray-950 shadow-zinc-700 P-2 border-box">
+      <div className=" flex align-baseline justify-center m-4">
+        <div className="bold mr-4 md:m-4 md:w-1/3 rounded-lg border-2 border-gray-950 shadow-zinc-700 P-2 border-box">
         <input placeholder="enter movies name here ......."
           type="search"
           value={inputValue}
           className=" border-0 outline-offset-0 p-3 rounded-lg w-full"
           onChange={(e) => {
-            setInputValue(e.target.value);
+            setInputValue(e.target.value.toLowerCase());
             console.log(inputValue);
           }}
         />
         </div>
-        <button className="rounded-lg bg-lime-300 m-4 p-2"
+        <button className="rounded-lg bg-lime-300 md:m-4 p-2"
           type="button"
           onClick={() => {
             console.log(inputValue);
@@ -68,3 +80,7 @@ export const App = () => {
     </>
   );
 };
+
+
+
+// https://api.themoviedb.org/3/search/movie?api_key=d62e1adb9803081c0be5a74ca826bdbd&query=
