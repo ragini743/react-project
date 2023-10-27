@@ -70,7 +70,7 @@ export const App = () => {
       <div className="grid-cols-1 sm:grid-cols-2 my-14 mx-auto h-full grid  md:grid-cols-3 gap-6 p-2 max-w-screen-lg justify-center">
         {movies.map((movie) => (
           <Link to={"movie?q="+movie.title} key={movie.id}>
-          <Component movie={movie} />;
+          <Component movie={movie} />
           
           </Link>
         ))}

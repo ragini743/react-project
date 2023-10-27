@@ -30,9 +30,9 @@ export const Component = (props) => {
         </h1>
         <h1 className="font-bold">Voting : <span className="font-normal text-slate-800"> {vote_average}* </span></h1>
         <h1 className="font-bold">Lang :<span className="font-normal text-slate-800"> {original_language} </span></h1>
-        <p className="text-slate-400 text-xs overflow-hidden">
+        {/* <p className="text-slate-400 text-xs overflow-hidden">
           Overview : {overview}
-        </p>
+        </p> */}
       </div>
     </div>
   );
