@@ -1,0 +1,1 @@
+export const LOGO = "https://logodix.com/logo/1669.png";
