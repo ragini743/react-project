@@ -1,9 +1,9 @@
 
 const Description =() =>{
     return(
-        <div className="mt-10 px-4 sm:px-10  sm:flex md:px-20">
-            <main className="mb-10 md:w-[50%]">
-                <h1 className="text-4xl font-extrabold text-red-600 
+        <div className="mt-6 px-4 sm:px-10  md:flex   md:px-[10%]">
+            <main className="mb-10 flex-1 md:w-[50%] ">
+                <h1 className="text-4xl font-extrabold text-red-600 break-words 
                 sm:text-6xl md:text-8xl">YOUR FEET DESERVE THE BEST</h1>
                 <p className="mt-6 sm:text-xl">
                     your feet deserve the best and we are here to help you with our shoes. your feet deserve the bestand we are here to help you with our shoes
@@ -19,8 +19,8 @@ const Description =() =>{
                     </div>
                 </div>
             </main>
-            <div className="p-4 mb-10  md:w-[50%] h-full">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="shoes-imge" className="w-[100%]"></img>
+            <div className="p-4  mb-10 flex-1 md:w-[50%]  md:py-16 md:h-[550px]">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="shoes-imge" className="w-[100%] md:h-[100%] object-cover"></img>
              </div>
 
         </div>
