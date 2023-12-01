@@ -2,8 +2,8 @@ import React from 'react'
 import Form from './Form'
 const UserData = () => {
   return (
-    <div className='relative top-[100px]'>
-      <div>
+    <div className='relative top-[50px] sm:top-[100px] px-10 md:flex md:px-4'>
+      <div className='md:w-[50%]'>
         <div className='flex '>
         <button type="button" className='text-xs p-2 sm:text-sm md:text-md bg-black flex items-center justify-center text-white mx-4
         rounded-lg'>
@@ -26,7 +26,7 @@ const UserData = () => {
         <Form />
       </div>
      
-     <div>
+     <div className='md:ml-6 md:w-[50%] m-auto md:relative -top-5'>
             <img src="/Service 24_7.png"alt="service-icon"></img>
         </div>
      
