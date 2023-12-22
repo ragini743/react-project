@@ -24,9 +24,9 @@ const Form = () => {
           </label>
           <input type="email" className="h-full w-full p-5"></input>
         </div>
-        <div className="border-2 border-black relative mb-6">
+        <div className="border-2 border-black relative mb-6 p-2">
           <label className="absolute -top-4 left-10 px-2 bg-white">TEXT </label>
-          <textarea className="w-full h-full p-4 border-none row-8"></textarea>
+          <textarea className="w-full h-full border-none row-10 my-auto outline-none"></textarea>
         </div>
         <div className="flex justify-end">
           <button type="submit" className="bg-black px-3 text-white">
