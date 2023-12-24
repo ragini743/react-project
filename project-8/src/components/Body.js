@@ -1,8 +1,11 @@
 import React from 'react'
+import TotalScore from './TotalScore'
 
 const Body = () => {
   return (
-    <div>xcvb </div>
+    <div>
+        <TotalScore />
+    </div>
   )
 }
 
