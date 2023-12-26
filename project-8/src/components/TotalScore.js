@@ -3,6 +3,7 @@ import NumberSelector from './NumberSelector'
 
 const TotalScore = () => {
   return (
+    <div>
     <div className='p-5 md:p-10 flex flex-col md:flex-row md:justify-between'>
         <div className='mb-9 md:w-[30%] flex flex-col justify-center items-center'>
         <span className=' mx-auto border-2 border-black 
@@ -11,6 +12,8 @@ const TotalScore = () => {
         </div>
             <NumberSelector />
      
+    </div>
+    <p className='text-right  pr-8 font-bold text-xl md:-mt-32 md:text-2xl md:pr-20'>select Number</p>
     </div>
   )
 }
