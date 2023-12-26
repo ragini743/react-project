@@ -1,5 +1,6 @@
 import React from 'react'
 import NumberSelector from './NumberSelector'
+import RollToDice from './RollToDice'
 
 const TotalScore = () => {
   return (
@@ -14,6 +15,7 @@ const TotalScore = () => {
      
     </div>
     <p className='text-right  pr-8 font-bold text-xl md:-mt-32 md:text-2xl md:pr-20'>select Number</p>
+    <RollToDice />
     </div>
   )
 }

@@ -26,7 +26,7 @@ const NumberSelector = () => {
         </div>
       ))}
     </div>
-    // <p>selectedNumber</p>
+    
      );
 };
 
