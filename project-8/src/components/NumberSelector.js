@@ -9,7 +9,7 @@ const NumberSelector = ({selectedNumber,setSelectedNumber,error,setError}) => {
 
   return (
     <div className="w-[100%] md:w-[50%]">
-      <h1 className="text-red-500 text-right">{error} </h1>
+      <h1 className="text-red-500 text-right -mt-4">{error} </h1>
     <div className="flex justify-evenly flex-wrap">
       {number.map((value) => (
         <div
