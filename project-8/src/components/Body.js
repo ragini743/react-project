@@ -4,13 +4,15 @@ import NumberSelector from './NumberSelector';
 import RollToDice from './RollToDice';
 import { useState } from 'react';
 import ResetButton from './ResetButton';
-import ResultButton from './ResultButton';
+import RulesButton from './RulesButton';
+import DiceRule from './DiceRule';
 const Body = () => {
   const [selectedNumber, setSelectedNumber] = useState();
   console.log('selected',selectedNumber)
   const [score,setScore] = useState(0) ;
   const [currentDIce , setCurrentDice] = useState(1);
   const [error,setError] = useState("")
+  const [showRules,setShowRules] = useState(false)
   const generateRandomNumber = (min ,max) =>{
     return Math.floor(Math.random() * (max - min) + min) ;
   } ;
@@ -43,7 +45,11 @@ const Body = () => {
         </div>
         <RollToDice currentDIce={currentDIce} setCurrentDice={setCurrentDice} roleDice={roleDice} />
         <ResetButton resetScore={resetScore} />
-        <ResultButton />
+        <RulesButton showRules={showRules} setShowRules={setShowRules} />
+        
+       {
+     showRules && <DiceRule />
+        }
     </div>
   )
 }
