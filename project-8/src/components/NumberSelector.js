@@ -1,13 +1,15 @@
-import React, { useState } from "react";
 
-const NumberSelector = () => {
+
+const NumberSelector = ({selectedNumber,setSelectedNumber,error}) => {
+  console.log(error)
   const number = [1, 2, 3, 4, 5, 6];
-  const [selectedNumber, setSelectedNumber] = useState();
+  // const [selectedNumber, setSelectedNumber] = useState();
 
 //   console.log("sele", selectedNumber);
 
   return (
     <div className="w-[100%] md:w-[50%]">
+      <h1 className="text-red-500 text-right">{error} </h1>
     <div className="flex justify-evenly flex-wrap">
       {number.map((value) => (
         <div
