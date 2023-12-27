@@ -1,6 +1,6 @@
 
 
-const NumberSelector = ({selectedNumber,setSelectedNumber,error}) => {
+const NumberSelector = ({selectedNumber,setSelectedNumber,error,setError}) => {
   console.log(error)
   const number = [1, 2, 3, 4, 5, 6];
   // const [selectedNumber, setSelectedNumber] = useState();
@@ -16,6 +16,7 @@ const NumberSelector = ({selectedNumber,setSelectedNumber,error}) => {
           key={value}
           onClick={() => {
             setSelectedNumber(value);
+            setError("")
             console.log("sele", selectedNumber);
           }}
           style={{

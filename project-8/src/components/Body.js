@@ -3,6 +3,8 @@ import TotalScore from './TotalScore'
 import NumberSelector from './NumberSelector';
 import RollToDice from './RollToDice';
 import { useState } from 'react';
+import ResetButton from './ResetButton';
+import ResultButton from './ResultButton';
 const Body = () => {
   const [selectedNumber, setSelectedNumber] = useState();
   console.log('selected',selectedNumber)
@@ -17,7 +19,7 @@ const Body = () => {
       setError("you have not selected any number") ;
       return;
     };
-    setError("")
+    // setError("")
     const randomNumber = generateRandomNumber(1,7) ;
     setCurrentDice(randomNumber) ;
     if (selectedNumber ===randomNumber){
@@ -34,9 +36,11 @@ const Body = () => {
     <div>
     <div className='flex items-center p-5 md:p-10 flex-col md:flex-row md:justify-evenly md:items-baseline'>
         <TotalScore score={score} />
-        <NumberSelector error={error}  selectedNumber={selectedNumber} setSelectedNumber={setSelectedNumber} />
+        <NumberSelector error={error} setError={setError} selectedNumber={selectedNumber} setSelectedNumber={setSelectedNumber} />
         </div>
         <RollToDice currentDIce={currentDIce} setCurrentDice={setCurrentDice} roleDice={roleDice} />
+        <ResetButton />
+        <ResultButton />
     </div>
   )
 }

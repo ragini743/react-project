@@ -12,8 +12,8 @@ const RollToDice = ({currentDIce,setCurrentDice,roleDice}) => {
         <img src={`/dice_${currentDIce}.png`} className='w-[70%] m-auto cursor-pointer' alt="dice-1"></img>
       </div>
       <p> click on Dice to roll</p>
-      <button type='reset' className='border-2 px-9 rounded-lg border-gray-700 mt-4 mb-3'>reset score</button>
-      <button type='submit' className='border-2 rounded-lg border-gray-700 px-8 mb-8'>show results</button>
+ 
+   
     </div>
   )
 }
