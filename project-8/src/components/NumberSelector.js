@@ -7,8 +7,8 @@ const NumberSelector = () => {
 //   console.log("sele", selectedNumber);
 
   return (
-    
-    <div className="flex justify-evenly flex-wrap  md:w-[50%]">
+    <div className="w-[100%] md:w-[50%]">
+    <div className="flex justify-evenly flex-wrap">
       {number.map((value) => (
         <div
           key={value}
@@ -25,6 +25,8 @@ const NumberSelector = () => {
           {value}
         </div>
       ))}
+    </div>
+    <p className='text-right  pr-8 font-bold mt-5 text-xl  md:text-2xl md:pr-20'>select Number</p>
     </div>
     
      );
