@@ -1,8 +1,8 @@
-
+import Header from "./components/Header";
 function App() {
   return (
-    <div className="App text-red-500">
- ghjkl
+    <div className="App">
+        <Header />
     </div>
   );
 }
