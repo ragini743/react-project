@@ -38,15 +38,15 @@ const Body = () => {
     } ;
   
   return (
-    <div>
+    <div className='bg-gradient-to-tl  from-amber-300 via-teal-200 to-red-200 h-full pb-5'>
     <div className='flex items-center p-5 md:p-10 flex-col md:flex-row md:justify-evenly'>
-        <TotalScore score={score} />
+        <TotalScore score={score} setScore={setScore}/>
         <NumberSelector error={error} setError={setError} selectedNumber={selectedNumber} setSelectedNumber={setSelectedNumber} />
         </div>
         <RollToDice currentDIce={currentDIce} setCurrentDice={setCurrentDice} roleDice={roleDice} />
         <ResetButton resetScore={resetScore} />
         <RulesButton showRules={showRules} setShowRules={setShowRules} />
-        
+
        {
      showRules && <DiceRule />
         }

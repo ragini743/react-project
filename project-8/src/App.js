@@ -11,7 +11,7 @@ setPlayGame(!playGame);
 console.log("BOfy",playGame);
  }
    return (
-    <div className="w-full h-[100vh]">
+    <div className="w-full">
       {playGame?<Header event={startGame} />:<Body /> }
      {/* <Header /> */}
     </div>

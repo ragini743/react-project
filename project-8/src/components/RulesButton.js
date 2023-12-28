@@ -1,5 +1,4 @@
 import React from "react";
-import DiceRule from "./DiceRule";
 
 const RulesButton = ({ showRules, setShowRules }) => {
   console.log("setShow", setShowRules);
