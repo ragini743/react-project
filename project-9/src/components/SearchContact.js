@@ -9,7 +9,7 @@ const SearchContact = () => {
             <input type="text" className=' text-white font-thin text-xs  md:text-sm bg-zinc-900 outline-none flex-grow' placeholder='search Contact'></input>
             
         </div>
-        <div className='w-[15%] ml-[5%]'>
+        <div className='w-[15%] ml-[5%] flex justify-end'>
             <img src='./Group 1.png' alt="add-icon"></img>
         </div>
     </div>
