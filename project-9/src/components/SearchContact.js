@@ -10,7 +10,7 @@ const SearchContact = () => {
             
         </div>
         <div className='w-[15%] ml-[5%] flex justify-end'>
-            <img src='./Group 1.png' alt="add-icon"></img>
+            <img src='./Group 1.png' alt="add-icon" className='cursor-pointer'></img>
         </div>
     </div>
   )
