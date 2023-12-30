@@ -26,14 +26,14 @@ function App() {
 },[] 
   ) ;
   return (
-    <div className="App px-12 h-[100vh] md:w-[40%] py-5 md:px-16 md:mx-auto bg-zinc-900">
+    <div className="App px-6 h-[100vh] md:w-[40%] py-5 md:px-16 md:mx-auto bg-zinc-900">
         <Header />
         <SearchContact />
         <NoContact />
         
           {contact.map((cont ) => (
-            <div key={cont.id}>
-          <GroupOfContact />
+            <div key={cont.id} className="">
+          <GroupOfContact cont={cont} />
           </div>))}
       
     </div>
