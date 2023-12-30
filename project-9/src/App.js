@@ -4,14 +4,21 @@ import NoContact from "./components/NoContact";
 import SearchContact from "./components/SearchContact";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./config/Firebase";
+import GroupOfContact from "./components/GroupOfContact";
 function App() {
   const [contact ,setContact] = useState([]) ;
   const getContacts = async () => {
     const contactCollection = collection (db, 'contacts'  );
     const snapshot = await getDocs(contactCollection);
     console.log("json",snapshot);
-    const constactData = snapshot.docs.map((doc) => doc.data()); 
-    console.log("data",constactData)
+    const contactData = snapshot.docs.map((doc) => {
+       return {
+         id: doc.id ,
+      ...doc.data()} ;
+    }
+      ); 
+    console.log("data",contactData)
+    setContact(contactData)
   }
 
  useEffect(() =>{
@@ -23,6 +30,12 @@ function App() {
         <Header />
         <SearchContact />
         <NoContact />
+        
+          {contact.map((cont ) => (
+            <div key={cont.id}>
+          <GroupOfContact />
+          </div>))}
+      
     </div>
   );
 }
