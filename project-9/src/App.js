@@ -2,10 +2,16 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import NoContact from "./components/NoContact";
 import SearchContact from "./components/SearchContact";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "./config/Firebase";
 function App() {
   const [contact ,setContact] = useState([]) ;
-  const getContacts = async() =>{
-
+  const getContacts = async () => {
+    const contactCollection = collection (db, 'contacts'  );
+    const snapshot = await getDocs(contactCollection);
+    console.log("json",snapshot);
+    const constactData = snapshot.docs.map((doc) => doc.data()); 
+    console.log("data",constactData)
   }
 
  useEffect(() =>{
