@@ -2,11 +2,12 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <nav className='bg-white mt-2 rounded-lg p-1 mx-auto md:p-2'>
-        <div className='flex justify-center items-center md:text-lg font-bold'>
-           <img src ="./logos_firebase.png" alt='logo' className='mr-4 md:mr-12'></img>
-           firebase contact App
+    <nav className='bg-white mt-2 rounded-lg p-1 mx-auto md:p-2 flex items-center justify-center'>
+        <div className='mr-4'>
+           <img src ="./logos_firebase.png" alt='logo' className=''></img>
+          
         </div>
+        <div className='ml-4 md:text-lg font-bold'> firebase contact App</div>
         
     </nav>
   )

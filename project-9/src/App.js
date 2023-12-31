@@ -34,16 +34,17 @@ function App() {
 },[] 
   ) ;
   return (
-    <div className="App px-6 h-[100vh] md:w-[40%] py-5 md:px-16 md:mx-auto bg-zinc-900">
+    <div className="App px-6 h-[100vh] md:w-[50%] py-5 ml-auto mr-auto md:px-10 md:mx-auto relative bg-zinc-900 max-w-md">
         <Header />
-        <SearchContact />
-        <NoContact />
-        <div  className="">
+        <SearchContact onOpen = {onOpen} />
+        {/* <NoContact /> */}
+        <div  className="mt-4">
           {contact.map((cont ) => ( 
           <GroupOfContact key={cont.id} cont={cont}  />
           ))}
           </div>
-          <Modal open = {open} onClose= {onClose} />
+          { open &&  <Modal open = {open} onClose= {onClose} /> }
+         
     </div>
   );
 }
