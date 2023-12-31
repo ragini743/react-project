@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Modal = () => {
+const Modal = ({open, onClose , }) => {
   return (
-    <div></div>
+    <div>
+        return {
+            open && <div>sdcfvgbh</div>
+        }
+    </div>
   )
 }
 
