@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Modal = ({open, onClose ,formik , onOpen,setOpen}) => {
-   console.log("formik",formik)
+const Modal = ({open, onClose ,formik , onOpen,setOpen, update, setUpdate}) => {
+//    console.log("formik",formik)
   return (
     <div className=' '>
       <div className= 'absolute bg-white rounded-md z-50 top-32 left-10 right-10 shadow-white shadow-md '>
@@ -21,7 +21,7 @@ const Modal = ({open, onClose ,formik , onOpen,setOpen}) => {
         '></input>
         </label>
         <div className=' mb-2 flex justify-end mr-10'>
-        <button type='submit' className='border-blue-700 border-2 bg-blue-700 rounded-lg py-1 px-2 text-white '>add contact</button>
+        <button type='submit' className='border-blue-700 border-2 bg-blue-700 rounded-lg py-1 px-2 text-white '>{update?"update":"add"} contact</button>
   </div>
         </form>
         </div>

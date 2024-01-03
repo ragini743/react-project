@@ -4,7 +4,11 @@ import Modal from './Modal';
 import { useFormik } from 'formik';
 import { db } from "../config/Firebase";
 import { addDoc, collection } from 'firebase/firestore';
-const ContactUpdate = ({open,onClose,onOpen,setOpen ,setContact,contact}) => {
+
+const ContactUpdate = ({open,onClose,onOpen,setOpen ,setContact,contact ,update ,setUpdate, cont }) => {
+    console.log('update:::', update)
+    console.log('cont:::', cont)
+
     const addContact = async (contact) => {
      try{
    const contactRef = collection (db,"contacts");
@@ -14,6 +18,8 @@ const ContactUpdate = ({open,onClose,onOpen,setOpen ,setContact,contact}) => {
     }
 
       } ;
+
+
     const formik = useFormik({
      initialValues : {
         name : "",
@@ -32,7 +38,7 @@ const ContactUpdate = ({open,onClose,onOpen,setOpen ,setContact,contact}) => {
     });
   return (
     <div>
-      <Modal onClose={onClose} open={open} formik={formik} onOpen={onOpen} setOpen={setOpen}  />
+      <Modal onClose={onClose} open={open} formik={formik} onOpen={onOpen} setOpen={setOpen} update={update} setUpdate={setUpdate} />
     </div>
   )
 }
