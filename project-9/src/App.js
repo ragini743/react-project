@@ -41,9 +41,9 @@ function App() {
     <div className="App px-6 h-[100vh] overflow-hidden md:w-[50%] py-5 mx-auto md:px-10 relative bg-zinc-900 max-w-md">
         <Header />
         <SearchContact onOpen = {onOpen} />
-        { contact.length === 0 ? <div className="my-[50%]"><NoContact /></div> : <div  className="mt-4 overflow-scroll w-[100%]">
+        { contact.length === 0 ? <div className="my-[50%]"><NoContact /></div> : <div  className="mt-4 overflow-scroll h-full ">
           {contact.map((cont ) => ( 
-          <GroupOfContact key={cont.id} cont={cont}  />
+          <GroupOfContact key={cont.id} cont={cont} setContact={setContact} contact={contact} />
           ))}
           </div> }
        
