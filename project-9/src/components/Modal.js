@@ -29,9 +29,9 @@ const Modal = ({ open, onClose, formik, onOpen, setOpen, isUpdate }) => {
             </label>
 
             <label htmlFor="email" className="flex flex-col mb-4">
-              Email
+              Phone no
               <input
-                type="Email"
+                type="number"
                 onChange={formik.handleChange}
                 value={formik.values.email}
                 name="email"
