@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchContact = ({ onOpen, isUpdate, setIsUpdate }) => {
   return (
-    <div className="flex items-center mt-6">
+    <div className="flex items-center mt-6 p-1">
       <div className="border-2 border-white items-center rounded-lg flex p-1 md:p-2 relative  w-[85%] md:w-[80%]">
         <img
           src="./search-icon.png"
