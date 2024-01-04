@@ -44,7 +44,7 @@ const ContactUpdate = ({
   const formik = useFormik({
     initialValues: {
       name: isUpdate ? data.name : "",
-      email: isUpdate ? data.email : "",
+      email: isUpdate ? data.phoneN : "",
     },
 
     onSubmit: (values) => {

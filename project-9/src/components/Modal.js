@@ -28,14 +28,14 @@ const Modal = ({ open, onClose, formik, onOpen, setOpen, isUpdate }) => {
               ></input>
             </label>
 
-            <label htmlFor="email" className="flex flex-col mb-4">
+            <label htmlFor="PhoneN" className="flex flex-col mb-4">
               Phone no
               <input
                 type="number"
                 onChange={formik.handleChange}
-                value={formik.values.email}
-                name="email"
-                id="email"
+                value={formik.values.phoneN}
+                name="PhoneN"
+                id="PhoneN"
                 className="border-2 border-black rounded-sm pl-4 p-1 shadow-md
         "
               ></input>
