@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchContact = ({ onOpen, isUpdate, setIsUpdate }) => {
   return (
-    <div className="flex items-center mt-6 p-2">
+    <div className="flex items-center mt-6 py-2">
       <div className="border-2 border-white items-center rounded-lg flex p-1 md:p-2 relative  w-[85%] md:w-[80%]">
         <img
           src="./search-icon.png"
@@ -11,7 +11,7 @@ const SearchContact = ({ onOpen, isUpdate, setIsUpdate }) => {
         ></img>
         <input
           type="text"
-          className=" text-white font-thin text-xs  md:text-sm bg-transparent outline-none flex-grow"
+          className=" text-white font-thin text-sm  md:text-sm bg-transparent outline-none flex-grow"
           placeholder="search Contact"
         ></input>
       </div>
