@@ -1,7 +1,7 @@
 import React from "react";
 
 const Modal = ({ open, onClose, formik, onOpen, setOpen, isUpdate }) => {
-  console.log("onClose", onClose);
+  console.log("onClose", formik);
   return (
     <div className=" ">
       <div className="absolute bg-white rounded-md z-50 top-32 left-10 right-10 shadow-white shadow-md ">
@@ -33,7 +33,7 @@ const Modal = ({ open, onClose, formik, onOpen, setOpen, isUpdate }) => {
               <input
                 type="number"
                 onChange={formik.handleChange}
-                value={formik.values.phoneN}
+                value={formik.values.PhoneN}
                 name="PhoneN"
                 id="PhoneN"
                 className="border-2 border-black rounded-sm pl-4 p-1 shadow-md

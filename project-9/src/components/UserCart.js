@@ -10,7 +10,7 @@ const UserCart = ({
   setIsUpdate,
   setData,
 }) => {
-  console.log("onOpen", onOpen);
+  console.log("onOpen", cont);
   const deleteContact = async (id) => {
     await deleteDoc(doc(db, "contacts", id));
     const filter = contact.filter((elem) => elem.id !== id);
@@ -29,7 +29,7 @@ const UserCart = ({
           </div>
           <div className="">
             <p className="font-bold">{cont.name}</p>
-            <p className="font-normal">{cont.email}</p>
+            <p className="font-normal">{cont.PhoneN}</p>
           </div>
         </div>
         <div className="flex">
