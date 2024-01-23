@@ -20,7 +20,7 @@ const Form = () => {
         </div>
         <div className="border-2 border-black relative  mb-6">
           <label className="absolute -top-4 left-10 px-2 bg-white">
-            E-mail{" "}
+            E-mail
           </label>
           <input type="email" className="h-full w-full p-5"></input>
         </div>

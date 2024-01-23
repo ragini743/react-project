@@ -4,7 +4,7 @@ import logo from './logo.svg';
 
 function App() {
   return (
-    <div className="App bg-slate-900">
+    <div className="App">
       hello i'm header
         <Slider />
     </div>
